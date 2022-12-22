@@ -1,0 +1,2 @@
+ALTER TABLE movies DROP COLUMN id;
+ALTER TABLE movies ADD COLUMN id integer  PRIMARY KEY;
