@@ -1,2 +1,2 @@
-ALTER TABLE movies DROP COLUMN id;
-ALTER TABLE movies ADD COLUMN id integer  PRIMARY KEY;
+ALTER TABLE movies DROP COLUMN IF EXISTS version;
+ALTER TABLE movies ADD COLUMN version integer ;
