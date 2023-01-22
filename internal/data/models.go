@@ -20,6 +20,7 @@ type Models struct {
 		Delete(id int64) error
 		GetAll(title string, genres []string, filters Filters) ([]*Movie, Metadata, error)
 	}
+	Users UserModel // Add a new Users field.
 }
 
 // For ease of use, we also add a New() method which returns a Models struct containing
@@ -27,5 +28,6 @@ type Models struct {
 func NewModels(db *sql.DB) Models {
 	return Models{
 		Movies: MovieModel{DB: db},
+		Users:  UserModel{DB: db}, // Initialize a new UserModel instance.
 	}
 }
